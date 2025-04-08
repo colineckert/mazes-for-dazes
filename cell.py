@@ -2,7 +2,7 @@ from line import Line
 from point import Point
 
 class Cell:
-    def __init__(self, win):
+    def __init__(self, win=None):
         self.has_left_wall = True
         self.has_right_wall = True
         self.has_top_wall = True
@@ -47,5 +47,3 @@ class Cell:
         line = Line(center, other_center)
         color = "gray" if undo else "red"
         self._win.draw_line(line, color)
-
-
